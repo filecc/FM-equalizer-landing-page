@@ -1,0 +1,59 @@
+/* reset css */
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  font-family: 'IBM Plex Sans', sans-serif;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  max-width: 100%;
+  block-size: auto;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  border: none;
+}
+
+/* utilities */
+
+:root{
+    /* Color styles */
+--green: rgba(102, 226, 220, 1);
+--orange: rgba(250, 116, 83, 1);
+--yellow: rgba(255, 185, 100, 1);
+--light: rgba(252, 250, 249, 1);
+--dark: rgba(25, 24, 38, 1);
+
+}
