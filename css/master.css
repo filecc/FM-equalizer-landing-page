@@ -3,20 +3,20 @@
 *,
 *::before,
 *::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  -webkit-box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
 }
 
 html:focus-within {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 
 body {
-  min-height: 100vh;
-  text-rendering: optimizeSpeed;
-  font-family: 'IBM Plex Sans', sans-serif;
+    min-height: 100vh;
+    text-rendering: optimizeSpeed;
+    font-family: 'IBM Plex Sans', sans-serif;
 }
 
 img,
@@ -24,36 +24,231 @@ picture,
 video,
 canvas,
 svg {
-  max-width: 100%;
-  block-size: auto;
+    max-width: 100%;
+    block-size: auto;
 }
 
 a {
-  text-decoration: none;
-  color: inherit;
+    text-decoration: none;
+    color: inherit;
 }
 
 ol,
 ul {
-  list-style: none;
+    list-style: none;
 }
 
 input,
 button,
 textarea,
 select {
-  font: inherit;
-  border: none;
+    font: inherit;
+    border: none;
 }
 
 /* utilities */
 
-:root{
+:root {
     /* Color styles */
---green: rgba(102, 226, 220, 1);
---orange: rgba(250, 116, 83, 1);
---yellow: rgba(255, 185, 100, 1);
---light: rgba(252, 250, 249, 1);
---dark: rgba(25, 24, 38, 1);
+    --green: #66e2dc;
+    --orange: #fa7453;
+    --yellow: #ffb964;
+    --light: rgba(252, 250, 249, 1);
+    --dark: rgba(25, 24, 38, 1);
+    --bs-btn-padding-y: 3rem;
+    --bs-btn-padding-x: .5rem;
+    --bs-btn-font-size: 4rem;
+
+}
+
+.wrapper {
+    background-image: url('../assets/bg-main-desktop.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    min-height: 100vh;
+    position: relative;
+    color: var(--dark);
+}
+
+#header-pattern {
+    position: absolute;
+    top: -20px;
+    right: 0;
+}
+
+h1 {
+    font-size: 88px;
+    font-weight: bold;
+    line-height: 78px;
+}
+
+header {
+    padding: 3rem 0;
+}
+
+.headerText {
+    max-width: 60vw;
+    padding: 3.5rem 0;
+}
+
+.headerText p {
+    font-size: 20px;
+    padding: 2rem 0;
+    line-height: 34px;
+}
+
+/* main */
+.mainDarkContainer {
+    background-color: var(--dark);
+    margin-top: 10rem;
+    padding: 0 6rem;
+}
+
+.orangeContainer {
+    background-color: var(--orange);
+    max-width: 25rem;
+    position: relative;
+    bottom: -100px;
+    right: -50px;
+    z-index: 1;
+
+}
+
+h2 {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.imageContainer {
+    max-width: 300px;
+    position: relative;
+    top: -200px;
+    left: -50px;
+    z-index: 1;
+}
+
+.patternMain {
+    position: absolute;
+    max-width: 250px;
+    bottom: 0;
+    left: 75%;
+    z-index: -1;
+}
+
+.price p {
+    font-size: 65px;
+    font-weight: bold;
+}
+
+/* footer */
+footer {
+    margin-top: 10rem;
+}
+
+footer i:hover {
+    color: var(--orange);
+    cursor: pointer;
+}
+
+@media screen and (min-width: 500px) and (max-width: 992px) {
+    #header-pattern {
+        max-width: 300px;
+        top: -30px;
+        right: -30px;
+    }
+
+    h1 {
+        font-size: 64px;
+    }
+
+    .md-w-100 {
+        min-width: 100%;
+    }
+
+    .md-mb-2 {
+        margin-bottom: 2rem;
+    }
+
+    .mainDarkContainer {
+        margin-top: 2rem;
+        padding-bottom: 4rem;
+    }
+
+    .orangeContainer {
+        min-width: 20rem;
+        left: 80px;
+        top: 150px;
+    }
+
+    .imageContainer {
+        left: 80px;
+        top: -100px;
+        min-width: 10rem;
+        position: absolute;
+    }
+
+    .patternMain {
+        top: 15%;
+        width: 200px;
+        left: 70%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    #header-pattern {
+        display: none;
+    }
+
+    h1 {
+        font-size: 40px;
+        line-height: normal;
+    }
+
+    .headerText {
+        min-width: 100%;
+        font-size: 1rem;
+    }
+
+    .mainDarkContainer {
+        margin-top: 2rem;
+        display: block;
+        padding: 0;
+        
+    }
+
+    .imageContainer {
+        max-width: 250px;
+        top: -100px;
+        left: 50%;
+        transform: translate(-50%, 0);
+    }
+
+    .patternMain {
+        max-width: 350px;
+        bottom: -120px;
+        left: -20px;
+    }
+
+    .orangeContainer {
+        max-width: 100%;
+        position: relative;
+        bottom: 0;
+        left: 0;
+    }
+    footer {
+        margin-top: 3rem;
+    }
+    .footerContainer{
+        flex-flow: column wrap;
+        gap: 2rem;
+    }
+    .socialIcon{
+        text-align: left;
+        padding-bottom: 2rem;
+    }
+
+
+
 
 }
